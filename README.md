@@ -43,6 +43,8 @@ $ yarn
 $ yarn deploy
 ```
 
+After deploy, plz setup trigger to start `notify` function every 10 minutes.
+
 ## Reference
 
 - [Search Tweets API](https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html)
