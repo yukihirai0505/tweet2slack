@@ -7,9 +7,9 @@ global.notify = () => {
   const twitterService = getTwitterService()
   keywords.forEach(keyword => {
     const res = twitterService.fetch(
-      encodeURIComponent(
-        `https://api.twitter.com/1.1/search/tweets.json?q=${keyword} exclude:retweets&lang=ja&result_type=recent&count=100`
-      )
+      `https://api.twitter.com/1.1/search/tweets.json?q=${encodeURIComponent(
+        `${keyword} exclude:retweets`
+      )}&lang=ja&result_type=recent&count=100`
     )
     const { statuses: tweets } = JSON.parse(res)
 
